@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LOS - PWR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="main-body" onload="showTable()">
+    <h1>Lista Organizacji Studenckich<br>Politechnika Wrocławska</h1>
+    <div class="inline">
+      <input
+      type="text"
+      id="search-field"
+      onkeyup="searchFunction()"
+      placeholder="Filtruj.."
+      title="Type in a category"
+      />
+      <button id="random-button" onclick="selectRandom()" >Kliknij dla LOSu - Wyświetl Losową Organizację Studencką</button>
+      <button onclick="resetTable()">Przywróć pełną tabelę</button>
+    </div>
+  </body>
+</html>

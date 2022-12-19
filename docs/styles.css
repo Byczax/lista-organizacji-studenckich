@@ -1,0 +1,7 @@
+.main-body {
+    max-width: 80%;
+}
+
+.inline {
+    display: flex;
+}
