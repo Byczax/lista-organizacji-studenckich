@@ -1,5 +1,5 @@
 function showTable() {
-  fetch("../data/results.json")
+  fetch("https://github.com/Byczax/los/blob/master/data/results.json")
     .then((response) => response.json())
     .then((data) => createTable(data));
 }
