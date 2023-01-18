@@ -1,5 +1,5 @@
 function showTable() {
-  fetch("https://github.com/Byczax/los/blob/master/data/results.json")
+  fetch("https://raw.githubusercontent.com/Byczax/lista-organizacji-studenckich/master/data/results.json?token=GHSAT0AAAAAAB5VA4JW6CU5XCWNMVC3HR6GY6IMXJQ")
     .then((response) => response.json())
     .then((data) => createTable(data));
 }
