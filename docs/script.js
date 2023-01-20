@@ -76,7 +76,7 @@ function searchFunction() {
     if (
       row.innerHTML.toUpperCase().indexOf(filter) > -1 &&
       filter_tags.every(
-        (tag) => row.innerHTML.toUpperCase().indexOf(tag.toUpperCase()) > -1
+        (tag) => row.innerHTML.toUpperCase().match(tag.toUpperCase())
       )
     ) {
       table[i].style.display = "";
