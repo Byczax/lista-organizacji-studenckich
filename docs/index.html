@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <title>LOS - PWR</title>
-    <link rel="icon" type="image/x-icon" href="images/dice-transparent.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="icon" type="image/x-icon" href="images/dice-transparent.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="script.js" type="text/javascript"></script>
   </head>
-  <body class="main-body" onload="showTable()">
-    <h1>Lista Organizacji Studenckich<br>Politechnika Wrocławska</h1>
+  <body class="main-body" onload="doOnLoad()">
+    <h1>Lista Organizacji Studenckich<br />Politechnika Wrocławska</h1>
     <div class="inline">
       <input
-      type="text"
-      id="search-field"
-      onkeyup="searchFunction()"
-      placeholder="Filtruj.."
-      title="Type in a category"
+        type="text"
+        id="search-field"
+        onkeyup="searchFunction()"
+        placeholder="Filtruj.."
+        title="Type in a category"
       />
-      <button id="random-button" onclick="selectRandom()" >Kliknij dla LOSu - Wyświetl Losową Organizację Studencką</button>
-      <button onclick="resetTable()">Przywróć pełną tabelę</button>
+      <button id="random-button" onclick="selectRandom()">
+        Kliknij dla LOSu - Wyświetl Losową Organizację Studencką
+      </button>
+      <button onclick="resetTable()">Przywróć pełną tabelę</button><br />
+    </div>
+    <div>
+      <label class="form-inline">
+        <select name="tags-list-help" id="tags-list-help"></select>
+        <button onClick="handleAddTag()">Dodaj tag</button>
+        <button onClick="clearTags()">Usuń wszystkie tagi</button>
+      </label>
+      <div id="active-filter-tags"></div>
     </div>
   </body>
 </html>

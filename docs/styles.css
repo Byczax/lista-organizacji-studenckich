@@ -5,3 +5,21 @@
 .inline {
     display: flex;
 }
+
+table tr th:nth-child(1) {
+    width: 3%;
+}
+
+table tr th:nth-child(3) {
+    width: 40%;
+}
+
+table tr th:nth-child(4) {
+    width: 20%;
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
