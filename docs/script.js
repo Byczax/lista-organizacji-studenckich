@@ -72,18 +72,28 @@ function searchFunction() {
 
   for (var i = 1; i < table.length; i++) {
     row = table[i];
-
+    var tags = row.getElementsByClassName("tag");
     if (
       row.innerHTML.toUpperCase().indexOf(filter) > -1 &&
-      filter_tags.every(
-        (tag) => row.innerHTML.toUpperCase().match(tag.toUpperCase())
-      )
+      filter_tags.every((tag) => {
+        for (const tag_element of tags) {
+          if (tag_element.innerHTML == tag) {
+            return true;
+          }
+        }
+        return false;
+      })
     ) {
       table[i].style.display = "";
     } else {
       table[i].style.display = "none";
     }
   }
+}
+
+function matchExact(r, str) {
+  var match = str.match(r);
+  return match && str === match[0];
 }
 
 function selectRandom() {
